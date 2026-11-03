@@ -1,1 +1,2 @@
 # Capstone_1
+This project focuses on analyzing sales data for **EmporiUm**, a growing student bookstore chain that sells textbooks, technology products, art supplies, and other merchandise. My **assigned sales territory is Massachusetts (MA)**. Using SQL, I will investigate sales performance within this territory, answer business questions, and present key findings through data analysis and visualization.

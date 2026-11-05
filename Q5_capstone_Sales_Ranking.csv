@@ -1,13 +1,19 @@
-region,state,regionaldirector
-East,"New York","Ana Jilani"
-East,Connecticut,"Ana Jilani"
-Northeast,Maryland,"Michael Jarvis"
-Northeast,Massachusetts,"Michael Jarvis"
-Northeast,Maine,"Michael Jarvis"
-Northeast,"New Jersey","Michael Jarvis"
-South,Florida,"Andy Gisselquist"
-South,"South Carolina","Andy Gisselquist"
-South,Texas,"Andy Gisselquist"
-West,Colorado,"Cassie Chambers"
-West,"Online Sales","Cassie Chambers"
-West,"Online Sales","Cassie Chambers"
+storelocation,Sales_Total,SalesRank
+Lowell,266982.83,18
+Framingham,269375.91,17
+Falmouth,276965.55,16
+Quincy,279646.07,15
+Hingham,289633.52,14
+Attleboro,290883.71,13
+Boston,295201.29,12
+"New Bedford",295443.42,11
+Pittsfield,301281.50,10
+Lynn,302049.65,9
+Haverhill,305762.60,8
+Somerville,312873.59,7
+Holyoke,320516.53,6
+Northampton,322039.24,5
+Provincetown,328860.51,4
+Nantucket,335547.81,3
+Leominster,338009.10,2
+Worcester,602183.44,1

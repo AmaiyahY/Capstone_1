@@ -20,14 +20,15 @@ WHERE State = 'Massachusetts';
 
 -- 2) What is the revenue breakdown by year and month for the sales territory
 -- ANSWER: Will be in a cvs file.
+-- Forgot to add the ON statement, it has been added.
 SELECT YEAR(transaction_date) as SaleYear,
 MONTH(transaction_date) as SaleMonth,
 SUM(sale_amount) as Total
 FROM store_sales
-JOIN store_locations
+JOIN store_locations ON store_sales.Store_id = store_locations.storeid
 WHERE state = 'Massachusetts'
 GROUP BY SaleYear, SaleMonth
-ORDER BY SaleYear, SaleMonth;
+ORDER BY SaleYear, SaleMonth
 
 -- 3) Provide a comparison of total revenue for the specific sales territory 
 -- and the region it belongs to

@@ -60,10 +60,10 @@ ORDER BY SaleMonth, products.categoryid;
 -- 5)Can you provide a ranking of in-store sales performance by each store in the sales territory, or a
 -- ranking of online sales performance by state within an online sales territory
 -- Answer:  Provided a csv
-SELECT storelocation, 
+SELECT storelocation,
 SUM(sale_amount) AS Sales_Total,
-RANK() OVER ( 
-ORDER BY SUM(sale_amount) DESC) AS SalesRank
+RANK() OVER (
+ ORDER BY SUM(sale_amount) DESC) AS SalesRank
 FROM store_sales AS ss
 JOIN store_locations AS sl ON ss.Store_id = sl.storeid
 WHERE state = 'Massachusetts'

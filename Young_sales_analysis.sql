@@ -45,7 +45,10 @@ WHERE management.region = 'Northeast';
 -- category for the sales territory?
 -- ANSWER: In the cvs file
 -- Took out products <-- (That is a table, not a column. Should not be in the SELECT)
-SELECT MONTH(store_sales.transaction_date) AS SaleMonth, AVG(store_sales.Sale_amount), 
+-- Update: added Years to better track, along with giving avrage an AS
+SELECT YEAR(store_sales.transaction_date) AS SaleYear,
+MONTH(store_sales.transaction_date) AS SaleMonth, 
+AVG(store_sales.Sale_amount) AS SalesAmount, 
 COUNT(*) AS NumOfTransactions, inventory_categories.category
 FROM Store_sales
 JOIN Store_locations 
@@ -55,8 +58,8 @@ ON Store_sales.prod_Num = Products.ProdNum
 JOIN inventory_categories
 ON inventory_categories.Categoryid = products.categoryid
 WHERE store_locations.state = 'Massachusetts'
-GROUP BY SaleMonth, products.categoryid
-ORDER BY SaleMonth, products.categoryid;
+GROUP BY SaleMonth, SaleYear, products.categoryid
+ORDER BY SaleMonth, SaleYear, products.categoryid;
 
 -- 5)Can you provide a ranking of in-store sales performance by each store in the sales territory, or a
 -- ranking of online sales performance by state within an online sales territory
